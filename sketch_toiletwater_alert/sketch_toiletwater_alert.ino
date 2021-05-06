@@ -1,6 +1,6 @@
 #define BEATTIME 200 //音を出している時間(msec)
 #define SPEAKER 12 //スピーカーの出力ピン番号
-#define  watorLevelPin  A0 // wator level sensor pin used
+#define waterLevelPin  A0 // water level sensor pin used
 
 int loopcnt=0;
 int waterLevel=0;
@@ -18,7 +18,7 @@ void loop() {
 
 
 
-  waterLevel = analogRead(watorLevelPin);
+  waterLevel = analogRead(waterLevelPin);
   Serial.println("Water Level: " + String(waterLevel) + "");
   if(waterLevel > 550) {
     
